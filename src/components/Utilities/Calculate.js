@@ -5,6 +5,8 @@
 const multiy= (first, second) =>{
     return first * second;
 }
+const menuCourt = (first, second) =>{
+    return first - second
+}
 
-
-export {add, multiy}
+export {add, multiy, menuCourt}
