@@ -22,7 +22,23 @@ else{
   localStorage.setItem('shoping-cart', JSON.stringify(shopingCart))
 
 }
-export {addToBd}
+
+const removeFromeDb = id =>{
+const storedCart = localStorage.getItem('shoping-cart')
+if(storedCart){
+  const shopingCart = JSON.parse(storedCart)
+  if(id in shopingCart){
+    delete shopingCart[id]
+    localStorage.setItem('shoping-cart', JSON.stringify(shopingCart))
+  }
+}
+}
+
+const removeShopingCart = ()=>{
+  localStorage.removeItem('shoping-cart')
+}
+
+export {addToBd, removeFromeDb, removeShopingCart}
 
 
 // const addToBd = id =>{
